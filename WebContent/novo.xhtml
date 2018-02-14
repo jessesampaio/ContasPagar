@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:body>
+	<h:form>	
+		<h:outputText value="Cadastro de Fornecedores"></h:outputText>
+		<br/><br/>
+		<h:outputLabel value="Nome:" ></h:outputLabel>
+		<h:inputText id="nome" value="#{forBean.fornecedor.nome}" ></h:inputText>
+		<br/>
+		<h:outputLabel value="Telefone:" ></h:outputLabel>
+		<h:inputText id="telefone" value="#{forBean.fornecedor.telefone}" ></h:inputText>
+		<br/>
+		<h:outputLabel value="Endereço:" ></h:outputLabel>
+		<h:inputText id="endereco" value="#{forBean.fornecedor.endereco}" ></h:inputText>
+		<br/>
+		<h:outputLabel value="Observação:" ></h:outputLabel>
+		<h:inputText id="observacao" value="#{forBean.fornecedor.observacao}" ></h:inputText>
+		<br/>	
+		<h:commandButton value="Cadastrar" action="#{forBean.addFornecedor()}"></h:commandButton>		
+	</h:form>
+</h:body>
+</html>
