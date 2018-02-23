@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	>
+
+<h:head>
+</h:head>
+
+<h:body>
+	<h:form>
+		<p:dataTable id="listagem_fornecedores" value="#{forBean.fornecedores}" var="fornecedor">
+			<p:column headerText="ID">  
+            	<h:outputText value="#{fornecedor.id}" />  
+        	</p:column> 
+        	<p:column headerText="Nome">  
+            	<h:outputText value="#{fornecedor.nome}" />  
+        	</p:column>
+        	<p:column headerText="Endereço">  
+            	<h:outputText value="#{fornecedor.endereco}" />  
+        	</p:column>
+        	<p:column headerText="Telefone">  
+            	<h:outputText value="#{fornecedor.telefone}" />  
+        	</p:column> 
+        	<p:column headerText="Editar">  
+            	<p:commandButton value="[EDITAR]" action="editar" actionListener="#{forBean.selecionarForecedor}"></p:commandButton>  
+        	</p:column> 
+		</p:dataTable>
+	<p:commandButton value="[NOVO CLIENTE]" actionListener="#{forBean.novoFornecedor}" ajax="false" action="novo?faces-redirect=true"></p:commandButton>
+	</h:form>
+</h:body>
+</html>
