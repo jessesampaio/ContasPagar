@@ -1,4 +1,4 @@
-package br.com.rlsystem.BEAN;
+package br.com.enterprise.BEAN;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import javax.faces.bean.SessionScoped;
 import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 
-import br.com.rlsystem.DAO.Fornecedor;
-import br.com.rlsystem.DAO.FornecedorDAO;
+import br.com.enterprise.DAO.Fornecedor;
+import br.com.enterprise.DAO.FornecedorDAO;
 
 @ManagedBean(name="forBean")
 @SessionScoped
@@ -32,6 +32,8 @@ public class FornecedorBean {
 	}
 	
 	public String deleteFornecedor() {
+		
+		this.fornecedor = fornecedores.getRowData();
 		
 		String retorno = "erro";
 		

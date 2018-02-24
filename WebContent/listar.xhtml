@@ -29,8 +29,19 @@
         	<p:column headerText="Editar">  
             	<p:commandButton value="[EDITAR]" action="editar" actionListener="#{forBean.selecionarForecedor}"></p:commandButton>  
         	</p:column> 
+        	<p:column headerText="Apagar">  
+            	<p:commandButton value="[APAGAR]" actionListener="#{forBean.deleteFornecedor}" update="listagem_fornecedores" >
+            		<p:confirm header="Exclusão de Fornecedor" message="Deseja realmente excluir este fornecedor?" icon="ui-icon-alert"></p:confirm>
+            	</p:commandButton>
+            	
+        	</p:column> 
 		</p:dataTable>
-	<p:commandButton value="[NOVO CLIENTE]" actionListener="#{forBean.novoFornecedor}" ajax="false" action="novo?faces-redirect=true"></p:commandButton>
+		<p:confirmDialog global="true" showEffect="fade" hideEffect="explode">
+			<p:commandButton value="SIM" type="button" styleClass="ui-confirmdialog-yes" icon="ui-icon-check"></p:commandButton>
+			<p:commandButton value="NÃO" type="button" styleClass="ui-confirmdialog-no" icon="ui-icon-close"></p:commandButton>
+		</p:confirmDialog>
+		
+	<p:commandButton value="[NOVO FORNECEDOR]" actionListener="#{forBean.novoFornecedor}" ajax="false" action="novo?faces-redirect=true"></p:commandButton>
 	</h:form>
 </h:body>
 </html>

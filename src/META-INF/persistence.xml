@@ -3,8 +3,8 @@
 
       <properties>
           <provider>org.hibernate.ejb.HibernatePersistence</provider>
-          <class>br.com.rlsystem.DAO.ContasPagar</class>
-          <class>br.com.rlsystem.DAO.Fornecedor</class>
+          <class>br.com.enterprise.DAO.ContasPagar</class>
+          <class>br.com.enterprise.DAO.Fornecedor</class>
          <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
          <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
          <property name="hibernate.connection.username" value="root"/>

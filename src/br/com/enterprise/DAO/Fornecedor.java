@@ -1,4 +1,4 @@
-package br.com.rlsystem.DAO;
+package br.com.enterprise.DAO;
 
 import java.sql.Date;
 

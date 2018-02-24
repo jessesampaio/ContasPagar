@@ -1,6 +1,6 @@
-package br.com.rlsystem.DAO;
+package br.com.enterprise.DAO;
 
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -34,6 +34,8 @@ public class ContasPagar {
 	@JoinColumn(name="fornecedor_id")
 	private Fornecedor fornecedor;
 
+	
+	//Getters and Setters
 	public int getId() {
 		return id;
 	}
@@ -73,9 +75,4 @@ public class ContasPagar {
 	public void setFornecedor(Fornecedor fornecedor) {
 		this.fornecedor = fornecedor;
 	}
-	
-	
-	
-	
-	
 }
